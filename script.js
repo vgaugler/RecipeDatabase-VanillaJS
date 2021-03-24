@@ -85,10 +85,10 @@ const searchDisplay = async () => {
         results.innerHTML = '<span class="noResult">No results</span>';
     }
     
-   /* results.innerHTML = ( 
+   results.innerHTML = ( 
 
         meals.map(meal => (
-            
+           
             `
             <div class="searchContainer" id="boxResize-${meal.idMeal}">
                 
@@ -98,48 +98,29 @@ const searchDisplay = async () => {
                 <div class="infos">
                 <h2>${meal.strMeal}</h2>
                 <div>origin : ${meal.strArea}</div>
+                <p class="textRecette">"${meal.strInstructions}"</p>
                 <button id="${meal.idMeal}"> En savoir plus </button>
                 </div>
-                
+                  
                 
             </div>
-            `
+            ` 
         )).join('')
-    ); */
+    ); 
 
-    for ( let i = 0; i<meals.length; i++){
-        
-        const newDiv = document.createElement('div');
-        
-        const container = `
-        
-        
-            
-            <img id="photo" src='${meals[i].strMealThumb}'/>
-
-            
-            <div class="infos">
-            <h2>${meals[i].strMeal}</h2>
-            <div>origin : ${meals[i].strArea}</div>
-            <button id="${meals[i].idMeal}"> En savoir plus </button>
-            </div>
-            
-            
-        
-        `
-
-        newDiv.innerHTML= container;
-        newDiv.className= 'searchContainer';
-        newDiv.id= `boxResize-${meals[i].idMeal}`;
-        results.appendChild(newDiv);
-        const btnCard = document.getElementById('btnCard');
-        btnCard.addEventListener('click', function(e){
-        console.log(e.target);
-        var searchContainer = document.querySelector('.searchContainer');
-        searchContainer.classList.toggle('active');
+   for ( let i = 0; i<meals.length; i++){
+        const btn = document.getElementById(meals[i].idMeal);
+      
+        btn.addEventListener('click', (event) => {
+            const boxResizeSelect = document.getElementById(`boxResize-${event.target.id}`);
+            boxResizeSelect.classList.toggle('bigContainer');
+           /* const textRecette= document.getElementById('textRecette');
+            const instructionRecette = document.createElement('p');
+            textRecette.classList.toggle('active');
+            textRecette.textContent= meal.idMeal;
+             ${meal.strInstructions}*/
         });
-         
-    }
+ }
 };
 /*<a href="${meal.strYoutube}" target="_blank"><i class="fab fa-youtube"></i></a>*/
 /* <div>category : ${meal.strCategory}</div>*/
