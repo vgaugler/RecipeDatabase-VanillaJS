@@ -1,125 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root {
+  --first-color: #ff5c77;
+  --second-color: #da2442;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 20px 30px;
+  z-index: 1000;
+  background-color: black;
+}
+header.sticky {
+  padding: 5px 100px;
+}
 
-  
+header .logo {
+  position: relative;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 900;
+  transition: 0.6s;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s;
+}
+header ul li a.active,
+header ul li a:hover {
+  color: #ff5c77;
+}
 
-  header
-  {
-      position:fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: 0.6s;
-      padding: 20px 30px;
-      z-index: 1000;
-      background-color: black;
-  }
-  header.sticky
-  {
-      padding: 5px 100px;
-
-  }
-
-  header .logo
-  {
-    position: relative;
-   color: #fff;
-   font-family: 'Poppins', sans-serif;
-   text-decoration: none;
-   font-size: 30px;
-   font-weight: 900;
-   transition: 0.6s;
-   text-transform: uppercase;
-   letter-spacing: 5px;
-  }
-  header ul
-  {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  header ul li
-  {
-      position: relative;
-      list-style: none;
-  }
-  header ul li a
-  {
-      position: relative;
-      display: inline-block;
-      margin: 0 15px;
-      padding: 5px 10px;
-      letter-spacing: 2px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #fff;
-      text-decoration: none;
-      transition: 0.6s;
-  }
-  header ul li a.active,
-  header ul li a:hover
-  {
-   color: #ff5c77;
-   
-  }
-
-
-  section.banner {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      background-image: url(banner.jpg);
-      transition: 0.6s;
-  }
-  .bannerBox{
-        width: 50%;
-        height: 60%;
-        top: 20px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transition: 0.6s;
-        /*background: rgba(255, 255, 255, 0.05);
+section.banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(banner.jpg);
+  transition: 0.6s;
+}
+.bannerBox {
+  width: 50%;
+  height: 60%;
+  top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.6s;
+  /*background: rgba(255, 255, 255, 0.05);
         border-radius: 15px;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
         overflow: hidden;
         backdrop-filter: blur(5px);
         z-index: 1;*/
-  }
+}
 
-  .bannerBox h1{
-    font-size: 100px;
-    color:#ff5c77 ;
-    letter-spacing: 5px;
-    text-shadow:black 0.1em 0.1em 0.2em ;
-    transition: 1s;
-
-  }
-  .bannerBox input {
-    padding: 10px;
-    width: 90%;
-    font-size: 16px;
-    border-width: 0px;
-    border-style: hidden;
-    border-radius: 25px;
-    transition: 0.6s;
+.bannerBox h1 {
+  font-size: 100px;
+  color: #ff5c77;
+  letter-spacing: 5px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  transition: 1s;
+}
+.bannerBox input {
+  padding: 10px;
+  width: 90%;
+  font-size: 16px;
+  border-width: 0px;
+  border-style: hidden;
+  border-radius: 25px;
+  transition: 0.6s;
 }
 
 .searchBox:hover,
@@ -128,48 +124,45 @@
   transform: scale(1.1);
 }
 
-.searchBox{
-
-	width: 65%;
+.searchBox {
+  width: 65%;
   height: 40px;
-  background-color:#FFFFFF;
+  background-color: #ffffff;
   border-radius: 30px;
   display: flex;
   align-items: center;
   padding: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   transition: 0.6s;
-
+  outline: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 .searchBox > i {
-
-	font-size: 20px;
-  color:black;
+  font-size: 20px;
+  color: black;
 }
 
-.searchBox > input{
-
-	flex: 1;
-	height: 40px;
-	border: none;
-	outline: none;
-	font-size: 18px;
+.searchBox > input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
   padding-left: 10px;
 }
 
-#randomMeal{
+#randomMeal {
   width: 40%;
   height: 40px;
-  background-color:#ff5c77;
+  background-color: #ff5c77;
   border-radius: 30px;
   padding: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  border : 5px solid #da2442;
+  border: 5px solid #da2442;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,203 +172,393 @@ a{
   letter-spacing: 3px;
   transition: 0.6s;
   color: white;
+  cursor: pointer;
 }
-  section.recetteBox {
-    
-    width: 100%;
-    padding: 50px;
-    margin: 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:#ff5c77 ;
-   
+section.recetteBox {
+  width: 90%;
+  padding: 50px;
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5c77;
 }
 #results {
-
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  position: relative;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .noResult {
-    font-size: 4rem;
-  }
-  
+  font-size: 4rem;
+}
+
 .searchContainer {
-    width: 400px;
-    height: 600px;
-    /*background: rgba(128, 128, 128, 0.4);*/
-    margin: 0.7rem;
-    border-radius: 25px;
-    box-shadow: 0 2px 5px #333;
-    transition: 0.6s;
-    background-color: #fff ;
-  }
+  position: relative;
+  width: 400px;
 
-/*#textRecette {
-  display: none;
-
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 0.7rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px #333;
+  transition: 0.6s;
+  background-color: #fff;
 }
-#texteRecette.active{
-  display: contents;
-}*/
-.bigContainer{
-  flex: 1 0 50%;
-  z-index: 2;
-}
-p {
-  width: 200px;
-  border: 1px solid;
-  padding: 2px 5px;
 
-  /* Nécessaires pour text-overflow */
-  white-space: nowrap;
+.boxTextRecette {
+  width: 100%;
+  height: 0px;
+  transition: 0.6s;
+  z-index: -1;
+
   overflow: hidden;
 }
-.textRecette
-{
-  text-overflow: clip;
+.bigContainer.boxTextRecette {
+  height: 100vh;
+  z-index: 2;
+  transition: 0.6s;
+  white-space: normal;
+  overflow: auto;
 }
-.searchContainer:hover{
-  transform: scale(1.05);
+.button-recipe {
+  width: 200px;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ff5c77;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border: 5px solid #da2442;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.6s;
+  color: white;
+  transition: 0.6s;
+  cursor: pointer;
+}
+body .searchContainer .infos {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body .searchContainer h2 {
+  font-size: 15px;
 }
 
-  body .searchContainer .infos {
-    
-      width: 100%;
-      height: 30%;
-      border-radius: 25px ;
-      padding: 10px;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      
+body .searchContainer img {
+  width: 100%;
+  height: 70%;
+  border-radius: 25px 25px;
+}
+body .searchContainer a {
+  display: inline-block;
+}
+body .searchContainer a i {
+  font-size: 1.4rem;
+}
 
+/* meal details */
+.ingredients {
+  color: #111;
+}
+.meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: #111;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: none;
+  padding: 2rem 0;
+  transition: 0.9s;
+}
+.box-detail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: #111;
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  width: 60%;
+  height: 80%;
+  overflow-y: scroll;
+  padding: 2rem 0;
+  transition: 0.9s;
+}
+.box-detail::-webkit-scrollbar {
+  width: 10px;
+}
+.box-detail::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+/* js related */
+.showRecipe {
+  display: block;
+}
+
+.meal-details-content {
+  margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category) {
+  padding: 1rem 0;
+}
+.recipe-close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  background: var(--second-color);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.recipe-title {
+  font-size: 2em;
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  margin-right: 15px;
+}
+.detailHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.boxIngredient {
+  width: 100%;
+  margin: 15px;
+}
+.title-ingredients {
+  padding: 1rem 0;
+}
+.ingredients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ingredientsDetail {
+  display: inline;
+  text-decoration: none;
+  list-style: none;
+  margin: 10px;
+  background: var(--first-color);
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+.recipe-category {
+  background: var(--second-color);
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  height: 33px;
+}
+.recipe-instruct {
+  padding: 1rem 0;
+}
+.boxTitleHeader {
+  width: 60%;
+}
+.recipe-meal-img {
+  width: 40%;
+}
+.recipe-meal-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.recipe-link {
+  margin: 1.4rem 0;
+}
+.recipe-link a {
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+.recipe-link a:hover {
+  opacity: 0.8;
+}
+
+/*  */
+.notFound {
+  grid-template-columns: 1fr !important;
+  color: var(--first-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.contributorBox {
+  height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  header,
+  header.sticky {
+    padding: 20px 50px;
+    z-index: 1000;
   }
-  body .searchContainer h2{
-    font-size: 15px;
-  }
-  
-  body .searchContainer img {
+  .menu {
+    position: fixed;
+    top: 95px;
+    left: -100%;
+    display: block;
+    padding: 100px 50px;
+    text-align: center;
     width: 100%;
-    height: 70%;
-    border-radius: 25px 25px;
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+    z-index: 999;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
-  body .searchContainer a {
-    display: inline-block;
+  .menu.active {
+    left: 0;
   }
-  body .searchContainer a i {
-    font-size: 1.4rem;
+  header ul li a {
+    color: #111;
+    font-size: 25px;
+    margin: 20px;
   }
-  .contributorBox {
-    height: 100vh ;
-    width: 100%;
+  .toggle {
+    width: 40px;
+    height: 40px;
+    background: url(menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+  }
+  .toggle.active {
+    background: url(close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: pointer;
   }
 
-
-  @media screen and (max-width: 760px){
-	
-
-
-    header, 
-    header.sticky{
-      padding: 20px 50px;
-      z-index: 1000;
-    }
-    .menu{
-      position: fixed;
-      top: 95px;
-      left: -100%;
-      display: block;
-      padding: 100px 50px;
-      text-align: center;
-      width: 100%;
-      height: 100vh;
-      background: #fff;
-      transition: 0.5s;
-      z-index: 999;
-      border-top: 1px solid rgba(0,0,0,0.2);
-    }
-    .menu.active
-    {
-      left: 0;
-    }
-    header ul li a
-    {
-      color: #111;
-      font-size: 25px;
-      margin: 20px;
-    }
-    .toggle{
-      width: 40px;
-      height: 40px;
-      background: url(menu.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 30px;
-      cursor: pointer;
-    }
-    .toggle.active
-    {
-      background: url(close.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 25px;
-      cursor: pointer;
-    }
-  
-    header.sticky .toggle{
-      filter: invert(1);
-    }
-
-  } 
-  @media screen and (max-width: 600px){
-
-
-    section{
+  header.sticky .toggle {
+    filter: invert(1);
+  }
+}
+@media screen and (max-width: 600px) {
+  section {
     padding: 10px;
   }
 
-  
-    .logo{
-      font-size: 20px;
-    }
- 
-    
-    header{
-      padding: 10px;
-      z-index: 1000;
-    }
-    
-    header.sticky{
-      padding: 10px;
-      z-index: 1000;
-    }
+  .logo {
+    font-size: 20px;
+  }
 
-  .banner h3{
+  header {
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  header.sticky {
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .banner h3 {
     font-size: 1em;
   }
-  .banner h2{
+  .banner h2 {
     font-size: 35px;
   }
-    .menu{
-      position: fixed;
-      top: 60px;
-      left: -100%;
-      display: block;
-      padding: 10x 10px;
-      text-align: center;
-      width: 100%;
-      height: 100vh;
-      background: #fff;
-      transition: 0.5s;
-      z-index: 999;
-      border-top: 1px solid rgba(0,0,0,0.2);
-    }
-    }
+  .menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    display: block;
+    padding: 10x 10px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+    z-index: 999;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}

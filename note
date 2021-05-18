@@ -1,0 +1,26 @@
+/*for (let i = 0; i < meals.length; i++) {
+    const btn = document.getElementById(meals[i].idMeal);
+
+    btn.addEventListener('click', (event) => {
+      const boxResizeSelect = document.getElementById(
+        `boxResize-${event.target.id}`
+      );
+      boxResizeSelect.classList.toggle('bigContainer');
+      const buttonText = document.querySelector('.button-recipe');
+      if (boxResizeSelect.className === 'boxTextRecette') {
+        buttonText.innerHTML = 'En savoir plus';
+      } else if (boxResizeSelect.className === 'boxTextRecette bigContainer') {
+        buttonText.innerHTML = 'Réduire';
+      } else {
+        buttonText.innerHTML = '';
+      }
+      /* const textRecette= document.getElementById('textRecette');
+            const instructionRecette = document.createElement('p');
+            textRecette.classList.toggle('active');
+            textRecette.textContent= meal.idMeal;
+             ${meal.strInstructions}
+    });
+  }*/
+};
+/*<a href="${meal.strYoutube}" target="_blank"><i class="fab fa-youtube"></i></a>*/
+/* <div>category : ${meal.strCategory}</div>*/
